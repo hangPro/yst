@@ -14,19 +14,19 @@ public class LoginUserParam extends BaseParameter {
      * 登录邮箱
      */
     @NotEmpty(message = "登录用户名不能为空")
-    private String username;
+    private String userName;
     /**
      * 登录密码
      */
     @NotEmpty(message = "密码不能为空")
     private String password;
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {

@@ -8,6 +8,7 @@ import com.yst.common.response.ReturnT;
  */
 public interface UserService {
 
+
     ReturnT loginUser(LoginUserParam param);
 
 }

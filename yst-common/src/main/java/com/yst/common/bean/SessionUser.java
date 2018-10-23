@@ -13,9 +13,7 @@ public class SessionUser implements Serializable {
 
     private String username;
 
-    private Long cStoreId;
-
-    private Long cCustomerId;
+    private Integer userType;
 
     private Boolean isUser = Boolean.TRUE;
 
@@ -35,20 +33,12 @@ public class SessionUser implements Serializable {
         this.username = username;
     }
 
-    public Long getcStoreId() {
-        return cStoreId;
+    public Integer getUserType() {
+        return userType;
     }
 
-    public void setcStoreId(Long cStoreId) {
-        this.cStoreId = cStoreId;
-    }
-
-    public Long getcCustomerId() {
-        return cCustomerId;
-    }
-
-    public void setcCustomerId(Long cCustomerId) {
-        this.cCustomerId = cCustomerId;
+    public void setUserType(Integer userType) {
+        this.userType = userType;
     }
 
     public Boolean getIsUser() {

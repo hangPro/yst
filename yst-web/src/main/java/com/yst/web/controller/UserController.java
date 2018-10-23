@@ -9,10 +9,10 @@ import com.yst.common.response.ReturnT;
 import com.yst.common.utils.DkyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
 
 /**
  * Created by hang on 2017/1/4 0004.
@@ -27,7 +27,7 @@ public class UserController {
     @Autowired
     private SessionProcess sessionProcess;
 
-    @RequestMapping(value = "loginUser", name = "登录")
+    @RequestMapping(value = "login", name = "登录")
     public ReturnT loginUser(LoginUserParam param, HttpServletResponse response) {
         ReturnT returnT = userService.loginUser(param);
         if (!returnT.isSuccess()) {
@@ -39,9 +39,13 @@ public class UserController {
             Users users = (Users) data;
             sessionUser.setUserId(users.getId());
             sessionUser.setUsername(users.getUsername());
+            sessionUser.setUserType(users.getUserType());
         }
         String token = sessionProcess.login(sessionUser, response, 60 * 60 * 24 * 7 * 1000L);
-        return new ReturnT().sucessData(token);
+        HashMap map = new HashMap();
+        map.put("accessToken",token);
+        map.put("userType",sessionUser.getUserType());
+        return new ReturnT().sucessData(map);
     }
 
 

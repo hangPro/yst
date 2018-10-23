@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * Created by hang on 2017/1/4 0004.
+ * @author hang
  */
 @Service("userService")
 public class UserServiceImpl implements UserService {
@@ -21,7 +22,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public ReturnT loginUser(LoginUserParam param) {
         ReturnT result = new ReturnT<>();
-        Users users = usersMapper.selectByUsername(param.getUsername());
+        Users users = usersMapper.selectByUsername(param.getUserName());
         if (users == null || !users.getPassword().equals(Base64Util.encodeHanfuPassWord(param.getPassword()))){
             return result.failureData(ResultCodeEnum.LOGIN_PASSWORD_ERROR);
         }

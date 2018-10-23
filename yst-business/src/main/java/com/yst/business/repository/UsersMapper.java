@@ -3,7 +3,6 @@ package com.yst.business.repository;
 import com.yst.common.bean.Users;
 import org.apache.ibatis.annotations.Param;
 
-@MyBatisRepository
 public interface UsersMapper {
     int deleteByPrimaryKey(Long id);
 

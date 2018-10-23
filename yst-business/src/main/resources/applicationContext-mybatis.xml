@@ -21,10 +21,8 @@
 	</bean>
 
 	<!-- 扫描basePackage下所有以@MyBatisRepository标识的 接口 -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	<bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.yst.business.repository" />
-		<property name="annotationClass"
-			value="com.yst.business.repository.MyBatisRepository" />
 	</bean>
 
 	<!-- 事务管理器配置, Jpa单数据源事务 -->

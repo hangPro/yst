@@ -176,7 +176,7 @@ public class PrintUtils {
         HashSet<String> ignoreMethods = new HashSet<String>(4);
         ignoreMethods.add("isSuccess");
         ignoreMethods.add("isFailed");
-        ignoreMethods.add("getData");
+        //ignoreMethods.add("getData");
         ignoreMethods.add("getDataList");
         return printObjectString(result, ignoreMethods);
     }

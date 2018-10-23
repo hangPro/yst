@@ -1,4 +1,4 @@
-package com.yst.business.repository;
+package com.yst.common.mapper;
 
 import org.springframework.stereotype.Component;
 

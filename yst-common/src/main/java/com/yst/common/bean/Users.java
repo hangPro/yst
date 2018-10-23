@@ -2,7 +2,7 @@ package com.yst.common.bean;
 
 import java.util.Date;
 
-public class Users {
+public class Users extends PojoObjectBase{
     private Long id;
 
     private String username;
@@ -20,6 +20,8 @@ public class Users {
     private Date createtime;
 
     private String photo;
+
+    private Integer userType;
 
     public Long getId() {
         return id;
@@ -91,5 +93,13 @@ public class Users {
 
     public void setPhoto(String photo) {
         this.photo = photo == null ? null : photo.trim();
+    }
+
+    public Integer getUserType() {
+        return userType;
+    }
+
+    public void setUserType(Integer userType) {
+        this.userType = userType;
     }
 }
