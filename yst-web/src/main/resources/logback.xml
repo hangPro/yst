@@ -24,10 +24,10 @@
 	<!-- [公共Appender] 默认 -->
 	<appender name="STDOUT_LOGGING"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${LOG_HOME}/dky/dky.log</file>
+		<file>${LOG_HOME}/yst/yst.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 		  	<!--日志文件输出的文件名 -->
-			<fileNamePattern>${LOG_HOME}/dky/dky.%d{yyyy-MM-dd}.log
+			<fileNamePattern>${LOG_HOME}/yst/yst.%d{yyyy-MM-dd}.log
 			</fileNamePattern>
 		</rollingPolicy>
 		<encoder>
@@ -37,7 +37,7 @@
 		</encoder>
 	</appender>
 
-	<logger name="com.dky.business" additivity="false">
+	<logger name="com.yst.business" additivity="false">
 		<level value="debug" />
 		<appender-ref ref="console" />
 		<appender-ref ref="STDOUT_LOGGING" />

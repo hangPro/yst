@@ -9,8 +9,8 @@ public class PlanLesson {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "lessonName")
-    private String lessonname;
+    @Column(name = "lessonId")
+    private Long lessonid;
 
     @Column(name = "planDateStart")
     private Date plandatestart;
@@ -36,17 +36,17 @@ public class PlanLesson {
     }
 
     /**
-     * @return lessonName
+     * @return lessonId
      */
-    public String getLessonname() {
-        return lessonname;
+    public Long getLessonid() {
+        return lessonid;
     }
 
     /**
-     * @param lessonname
+     * @param lessonid
      */
-    public void setLessonname(String lessonname) {
-        this.lessonname = lessonname;
+    public void setLessonid(Long lessonid) {
+        this.lessonid = lessonid;
     }
 
     /**

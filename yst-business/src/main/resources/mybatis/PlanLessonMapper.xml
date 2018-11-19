@@ -6,7 +6,7 @@
       WARNING - @mbg.generated
     -->
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="lessonName" jdbcType="VARCHAR" property="lessonname" />
+    <result column="lessonId" jdbcType="BIGINT" property="lessonid" />
     <result column="planDateStart" jdbcType="TIMESTAMP" property="plandatestart" />
     <result column="planDateEnd" jdbcType="TIMESTAMP" property="plandateend" />
     <result column="classId" jdbcType="BIGINT" property="classid" />
